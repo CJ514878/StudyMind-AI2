@@ -1342,108 +1342,343 @@ updateStudyScore();
 
 
 // ==========================================
-// AI STUDY ADVICE
+// STUDYMIND AI ASSISTANT
 // ==========================================
 
-async function generateAIAdvice() {
 
-    const adviceElement =
-        document.getElementById("aiAdviceText");
+// ==========================================
+// AI API REQUEST
+// ==========================================
 
-    if (!adviceElement) {
-        return;
-    }
+async function askStudyMindAI(prompt) {
 
-    adviceElement.textContent =
-        "🤖 Analyzing your study plan...";
+    const response =
+        await fetch("/api/ai-advice", {
 
-    try {
+            method: "POST",
 
-        const prompt = `
-You are StudyMind AI, a helpful study assistant.
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-Analyze the student's study plan and give short,
-practical and personalized study advice.
+            body: JSON.stringify({
+                prompt: prompt
+            })
 
-Student information:
+        });
 
-Subjects:
-${subjects.join(", ")}
 
-Hours available per day:
-${hoursPerDay}
+    const data =
+        await response.json();
 
-Days remaining:
-${daysLeft}
 
-Current study score:
-${calculateStudyScore()}/100
+    if (!response.ok) {
 
-Completed topics:
-${studyProgress.completedTopics.length}
-
-Total topics:
-${studyTopics.length}
-
-Give the student useful advice based on their
-current progress.
-
-Rules:
-- Keep the response between 2 and 4 sentences.
-- Be encouraging but realistic.
-- Do not use generic motivational clichés.
-- Focus on what the student should do next.
-- Mention their progress when relevant.
-`;
-
-        const response =
-            await fetch("/api/ai-advice", {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-                    prompt: prompt
-                })
-
-            });
-
-        const data =
-            await response.json();
-
-        if (!response.ok) {
-
-            throw new Error(
-                data.error ||
-                "AI request failed"
-            );
-
-        }
-
-        adviceElement.textContent =
-            data.result ||
-            "Keep following your study plan and stay consistent.";
-
-    }
-
-    catch (error) {
-
-        console.error(
-            "AI Advice Error:",
-            error
+        throw new Error(
+            data.error ||
+            "AI request failed"
         );
 
-        adviceElement.textContent =
-            "Unable to generate AI advice right now. Please try again later.";
-
     }
+
+
+    return (
+        data.result ||
+        "I couldn't generate a response right now."
+    );
 
 }
 
-generateAIAdvice();
+
+
+// ==========================================
+// ANALYZE MY PROGRESS
+// ==========================================
+
+let analyzeProgressButton =
+    document.getElementById(
+        "analyzeProgressButton"
+    );
+
+
+if (analyzeProgressButton) {
+
+    analyzeProgressButton.addEventListener(
+        "click",
+        async function() {
+
+            let adviceElement =
+                document.getElementById(
+                    "aiAdviceText"
+                );
+
+
+            if (!adviceElement) {
+                return;
+            }
+
+
+            analyzeProgressButton.disabled =
+                true;
+
+
+            analyzeProgressButton.textContent =
+                "🤖 Analyzing...";
+
+
+            adviceElement.textContent =
+                "StudyMind AI is analyzing your progress...";
+
+
+            try {
+
+                const completedTopics =
+                    studyProgress.completedTopics.length;
+
+
+                const totalTopics =
+                    studyTopics.length;
+
+
+                const remainingTopics =
+                    Math.max(
+                        0,
+                        totalTopics -
+                        completedTopics
+                    );
+
+
+                const score =
+                    calculateStudyScore();
+
+
+                const prompt = `
+You are StudyMind AI, a personalized
+academic study assistant.
+
+Analyze this student's current study progress.
+
+SUBJECTS:
+${subjects.join(", ")}
+
+HOURS AVAILABLE PER DAY:
+${hoursPerDay}
+
+DAYS REMAINING:
+${daysLeft}
+
+STUDY SCORE:
+${score}/100
+
+COMPLETED TOPICS:
+${completedTopics}
+
+TOTAL TOPICS:
+${totalTopics}
+
+REMAINING TOPICS:
+${remainingTopics}
+
+Give a short but useful analysis.
+
+Tell the student:
+1. How their progress looks.
+2. What they should focus on next.
+3. How they should use their available study time.
+
+Rules:
+- Keep the response between 3 and 5 sentences.
+- Be specific to the student's data.
+- Be encouraging but realistic.
+- Do not use generic motivational clichés.
+`;
+
+
+                const result =
+                    await askStudyMindAI(
+                        prompt
+                    );
+
+
+                adviceElement.textContent =
+                    result;
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "AI Analysis Error:",
+                    error
+                );
+
+
+                adviceElement.textContent =
+                    "Unable to analyze your progress right now. Please try again.";
+
+            }
+
+
+            analyzeProgressButton.disabled =
+                false;
+
+
+            analyzeProgressButton.textContent =
+                "🔍 Analyze My Progress";
+
+        }
+    );
+
+}
+
+
+
+// ==========================================
+// ASK AI
+// ==========================================
+
+let askAIButton =
+    document.getElementById(
+        "askAIButton"
+    );
+
+
+if (askAIButton) {
+
+    askAIButton.addEventListener(
+        "click",
+        async function() {
+
+            let questionInput =
+                document.getElementById(
+                    "aiQuestion"
+                );
+
+
+            let responseElement =
+                document.getElementById(
+                    "aiResponse"
+                );
+
+
+            if (
+                !questionInput ||
+                !responseElement
+            ) {
+
+                return;
+
+            }
+
+
+            let question =
+                questionInput.value.trim();
+
+
+            if (!question) {
+
+                responseElement.textContent =
+                    "Please type a question first.";
+
+                return;
+
+            }
+
+
+            askAIButton.disabled =
+                true;
+
+
+            askAIButton.textContent =
+                "🤖 Thinking...";
+
+
+            responseElement.textContent =
+                "StudyMind AI is thinking...";
+
+
+            try {
+
+                const score =
+                    calculateStudyScore();
+
+
+                const prompt = `
+You are StudyMind AI, a helpful
+personalized study assistant.
+
+Answer the student's question using
+their actual study information.
+
+STUDENT SUBJECTS:
+${subjects.join(", ")}
+
+HOURS AVAILABLE PER DAY:
+${hoursPerDay}
+
+DAYS REMAINING:
+${daysLeft}
+
+CURRENT STUDY SCORE:
+${score}/100
+
+COMPLETED TOPICS:
+${studyProgress.completedTopics.length}
+
+TOTAL TOPICS:
+${studyTopics.length}
+
+STUDENT QUESTION:
+${question}
+
+Give a clear, useful answer.
+
+Rules:
+- Answer the student's actual question.
+- Personalize the answer using their study data when useful.
+- Keep the answer concise but helpful.
+- Do not use generic motivational clichés.
+`;
+
+
+                const result =
+                    await askStudyMindAI(
+                        prompt
+                    );
+
+
+                responseElement.textContent =
+                    result;
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "Ask AI Error:",
+                    error
+                );
+
+
+                responseElement.textContent =
+                    "Unable to contact StudyMind AI right now. Please try again.";
+
+            }
+
+
+            askAIButton.disabled =
+                false;
+
+
+            askAIButton.textContent =
+                "🤖 Ask AI";
+
+        }
+    );
+
+}
 
 // ==========================================
 // TODAY'S SCHEDULE
