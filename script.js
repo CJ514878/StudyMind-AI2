@@ -1233,3 +1233,81 @@ if (themeButton) {
     });
 
 }
+// ==========================================
+// AI CONNECTION
+// ==========================================
+
+async function generateAIStudyAdvice(studyData) {
+
+    try {
+
+        const response = await fetch("/api/generate", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+
+                prompt: `
+You are StudyMind AI, an intelligent study assistant.
+
+Create useful, personalized study advice based on the student's information below.
+
+Curriculum: ${studyData.curriculum}
+
+Subjects: ${studyData.subjects.join(", ")}
+
+Topics:
+${JSON.stringify(studyData.topics)}
+
+Topic difficulties:
+${JSON.stringify(studyData.topicDifficulty)}
+
+Exam date: ${studyData.examDate}
+
+Days remaining: ${studyData.daysLeft}
+
+Study hours per day: ${studyData.hoursPerDay}
+
+Study start time: ${studyData.startTime}
+
+The student needs practical advice that helps them prepare effectively.
+
+Give:
+1. The most important topics to focus on.
+2. What the student should study first.
+3. How they should use their available study time.
+4. Specific study techniques.
+5. Advice based on their weak topics.
+6. Exam preparation advice.
+
+Keep the response clear, practical and student-friendly.
+`
+            })
+
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+
+            console.error("AI error:", data);
+
+            return null;
+
+        }
+
+        return data.result;
+
+    } catch (error) {
+
+        console.error("Failed to connect to StudyMind AI:", error);
+
+        return null;
+
+    }
+
+}
