@@ -889,7 +889,22 @@ let studyData = {
     studyScore,
     streak
 };
+// ==========================================
+// GENERATE AI STUDY ADVICE
+// ==========================================
 
+const aiAdvice = await generateAIStudyAdvice(studyData);
+
+if (aiAdvice) {
+
+    studyData.aiAdvice = aiAdvice;
+
+    localStorage.setItem(
+        "aiStudyAdvice",
+        aiAdvice
+    );
+
+}
 
 
 plan.innerHTML = `
