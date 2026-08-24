@@ -1342,6 +1342,110 @@ updateStudyScore();
 
 
 // ==========================================
+// AI STUDY ADVICE
+// ==========================================
+
+async function generateAIAdvice() {
+
+    const adviceElement =
+        document.getElementById("aiAdviceText");
+
+    if (!adviceElement) {
+        return;
+    }
+
+    adviceElement.textContent =
+        "🤖 Analyzing your study plan...";
+
+    try {
+
+        const prompt = `
+You are StudyMind AI, a helpful study assistant.
+
+Analyze the student's study plan and give short,
+practical and personalized study advice.
+
+Student information:
+
+Subjects:
+${subjects.join(", ")}
+
+Hours available per day:
+${hoursPerDay}
+
+Days remaining:
+${daysLeft}
+
+Current study score:
+${calculateStudyScore()}/100
+
+Completed topics:
+${studyProgress.completedTopics.length}
+
+Total topics:
+${studyTopics.length}
+
+Give the student useful advice based on their
+current progress.
+
+Rules:
+- Keep the response between 2 and 4 sentences.
+- Be encouraging but realistic.
+- Do not use generic motivational clichés.
+- Focus on what the student should do next.
+- Mention their progress when relevant.
+`;
+
+        const response =
+            await fetch("/api/ai-advice", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    prompt: prompt
+                })
+
+            });
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "AI request failed"
+            );
+
+        }
+
+        adviceElement.textContent =
+            data.result ||
+            "Keep following your study plan and stay consistent.";
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "AI Advice Error:",
+            error
+        );
+
+        adviceElement.textContent =
+            "Unable to generate AI advice right now. Please try again later.";
+
+    }
+
+}
+
+generateAIAdvice();
+
+// ==========================================
 // TODAY'S SCHEDULE
 // ==========================================
 
