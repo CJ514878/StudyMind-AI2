@@ -1734,7 +1734,11 @@ body:not(.dark-mode) #todaySchedule {
    ========================================== */
 
 .calendar-panel {
-    min-height: 550px;
+    width: 100%;
+    max-width: 900px;
+    min-height: 0;
+    margin: 30px auto;
+    box-sizing: border-box;
 }
 
 .calendar-panel > h2 {
