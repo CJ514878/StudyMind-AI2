@@ -1352,43 +1352,95 @@ updateStudyScore();
 
 async function askStudyMindAI(prompt) {
 
-    const response =
-        await fetch("/api/ai-advice", {
+    try {
 
-            method: "POST",
+        const response =
+            await fetch("/api/ai-advice", {
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+                method: "POST",
 
-            body: JSON.stringify({
-                prompt: prompt
-            })
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-        });
+                body: JSON.stringify({
+                    prompt: prompt
+                })
 
-
-    const data =
-        await response.json();
+            });
 
 
-    if (!response.ok) {
+        const text =
+            await response.text();
 
-        throw new Error(
-            data.error ||
-            "AI request failed"
+
+        console.log(
+            "AI API Status:",
+            response.status
         );
+
+
+        console.log(
+            "AI API Response:",
+            text
+        );
+
+
+        let data;
+
+
+        try {
+
+            data =
+                JSON.parse(text);
+
+        }
+
+        catch {
+
+            throw new Error(
+                "The AI server returned an invalid response."
+            );
+
+        }
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "AI request failed with status " +
+                response.status
+            );
+
+        }
+
+
+        if (!data.result) {
+
+            throw new Error(
+                "The AI server returned no result."
+            );
+
+        }
+
+
+        return data.result;
 
     }
 
+    catch (error) {
 
-    return (
-        data.result ||
-        "I couldn't generate a response right now."
-    );
+        console.error(
+            "StudyMind AI Error:",
+            error
+        );
+
+        throw error;
+
+    }
 
 }
-
 
 
 // ==========================================
