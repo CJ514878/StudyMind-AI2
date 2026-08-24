@@ -1551,7 +1551,7 @@ Rules:
                     await askStudyMindAI(
                         prompt
                     );
-
+console.log("AI API RETURNED:", result);
 
                 adviceElement.textContent =
                     result;
