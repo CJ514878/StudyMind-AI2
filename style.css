@@ -1594,13 +1594,25 @@ body:not(.dark-mode) #todaySchedule {
 
 /* PANELS */
 
-.panel-card,
-.calendar-panel {
+.panel-card {
     background: white;
     border-radius: 18px;
     padding: 25px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border: 1px solid #e2e8f0;
+}
+
+.calendar-panel {
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    box-sizing: border-box;
 }
 
 
