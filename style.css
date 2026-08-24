@@ -4105,3 +4105,13 @@ body.dark-mode .ai-response {
     background: #1e293b;
     color: #e2e8f0;
 }
+/* ==========================================
+   CENTER CALENDAR
+========================================== */
+
+#calendar {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
