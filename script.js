@@ -909,6 +909,15 @@ if (aiAdvice) {
 
 plan.innerHTML = `
 <h2>Your Study Plan</h2>
+<div class="ai-advice-box">
+
+    <h3>🤖 StudyMind AI Advice</h3>
+
+    <p id="aiAdviceText">
+        ${studyData.aiAdvice || "Generating personalized AI advice..."}
+    </p>
+
+</div>
 
 <div class="dashboard">
 
