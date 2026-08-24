@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>StudyMind AI - Study Plan</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<h2 class="logo">StudyMind AI</h2>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="index.html#features">Features</a></li>
+
+<li><a href="index.html#howItWorks">How It Works</a></li>
+
+<li><a href="index.html#contact">Contact</a></li>
+
+</ul>
+
+<button id="themeButton">
+🌙 Dark Mode
+</button>
+
+</nav>
+
+
+<main class="studyDashboard">
+
+<h1>Your Study Plan</h1>
+
+
+<!-- TOP STAT CARDS -->
+
+<div class="topStats">
+
+<div class="stat-card">
+
+<div class="icon">🕒</div>
+
+<h4>Weekly Hours</h4>
+
+<h2 id="weeklyHours">0</h2>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="icon">📅</div>
+
+<h4>Days Left</h4>
+
+<h2 id="daysLeft">0</h2>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="icon">🎯</div>
+
+<h4>Daily Goal</h4>
+
+<h2 id="dailyGoal">0 hrs</h2>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="icon">⭐</div>
+
+<h4>Study Score</h4>
+
+<h2 id="studyScore">0</h2>
+
+</div>
+
+</div>
+
+
+<!-- MAIN DASHBOARD -->
+
+<div class="dashboardGrid">
+
+
+<!-- LEFT PANEL -->
+
+<div class="leftPanel">
+
+
+<!-- PROGRESS -->
+
+<div class="panelCard">
+
+<h3>✅ Progress Tracker</h3>
+
+<div class="progressCircle">
+
+<span id="progressPercent">
+0%
+</span>
+
+</div>
+
+<p id="progressCount">
+0 of 0 subjects completed
+</p>
+
+<div class="progressBarContainer">
+
+<div id="progressBar"></div>
+
+</div>
+
+</div>
+
+
+<!-- STREAK -->
+
+<div class="panelCard">
+
+<h3>🔥 Study Streak</h3>
+
+<h1 id="studyStreak">
+0 Days
+</h1>
+
+<p>Keep it up!</p>
+
+</div>
+
+
+<!-- SCORE -->
+
+<div class="panelCard">
+
+<h3>⭐ Study Score</h3>
+
+<h1>
+<span id="scoreValue">0</span>/100
+</h1>
+
+<p id="scoreMessage">
+Keep following your study plan.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+
+<div class="rightPanel">
+
+
+<!-- CALENDAR -->
+
+<div class="panelCard calendarCard">
+
+<h3>📅 Study Calendar</h3>
+
+
+<div class="calendarHeader">
+
+<button id="prevMonth">
+‹
+</button>
+
+<h2 id="calendarMonth">
+August 2026
+</h2>
+
+<button id="nextMonth">
+›
+</button>
+
+</div>
+
+
+<div class="calendarWeekdays">
+
+<div>Sun</div>
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div>Thu</div>
+<div>Fri</div>
+<div>Sat</div>
+
+</div>
+
+
+<div id="calendarDays"
+class="calendarDays">
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BOTTOM SECTION -->
+
+<div class="bottomDashboard">
+
+
+<div class="panelCard">
+
+<h3>🎯 Today's Mission</h3>
+
+<div id="todayMission">
+
+</div>
+
+</div>
+
+
+<div class="panelCard">
+
+<h3>🕒 Today's Schedule</h3>
+
+<div id="todaySchedule">
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+<script src="study-plan.js"></script>
+
+</body>
+
+</html>
