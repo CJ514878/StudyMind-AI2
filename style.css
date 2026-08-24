@@ -4120,3 +4120,68 @@ body.dark-mode .ai-response {
     box-sizing: border-box;
     grid-column: 1 / -1;
 }
+/* ==========================================
+   LARGER STUDYMIND AI ASSISTANT
+========================================== */
+
+.ai-assistant-card {
+    padding: 32px;
+    min-height: 430px;
+}
+
+.ai-assistant-header {
+    margin-bottom: 28px;
+}
+
+.ai-assistant-header h2 {
+    font-size: 26px;
+}
+
+.ai-assistant-header p {
+    font-size: 15px;
+}
+
+.ai-analyze-section {
+    margin-bottom: 32px;
+}
+
+.ai-analyze-button {
+    padding: 16px 20px;
+    font-size: 16px;
+}
+
+.ai-analysis-result {
+    min-height: 55px;
+    padding: 18px;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.ask-ai-section {
+    margin-top: 28px;
+}
+
+.ask-ai-section h3 {
+    font-size: 20px;
+}
+
+.ask-ai-section p {
+    font-size: 15px;
+}
+
+#aiQuestion {
+    min-height: 90px;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.ask-ai-button {
+    padding: 16px 20px;
+    font-size: 16px;
+}
+
+.ai-response {
+    min-height: 70px;
+    padding: 18px;
+    font-size: 15px;
+}
