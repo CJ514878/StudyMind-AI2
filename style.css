@@ -4185,3 +4185,50 @@ body.dark-mode .ai-response {
     padding: 18px;
     font-size: 15px;
 }
+/* ==========================================
+   LARGER CENTERED CALENDAR
+========================================== */
+
+.calendar-panel {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.calendar-panel h2 {
+    font-size: 28px;
+}
+
+.calendar-header {
+    margin-bottom: 25px;
+}
+
+#calendarMonth {
+    font-size: 24px;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    width: 100%;
+}
+
+.calendar-weekdays > div {
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+.calendar-days {
+    gap: 8px;
+}
+
+.calendar-days > div {
+    min-height: 65px;
+    font-size: 16px;
+}
+
+.calendar-legend {
+    margin-top: 25px;
+    font-size: 14px;
+}
