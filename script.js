@@ -310,7 +310,7 @@ select.dataset.topic = topic;
 });
 
 
-generateButton.addEventListener("click", function () {
+generateButton.addEventListener("click", async function () {
 
     let curriculum =
     document.getElementById("curriculum").value;
