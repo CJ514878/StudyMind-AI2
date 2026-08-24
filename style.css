@@ -4106,12 +4106,12 @@ body.dark-mode .ai-response {
     color: #e2e8f0;
 }
 /* ==========================================
-   CENTER CALENDAR
+   RESTORE CENTERED CALENDAR
 ========================================== */
 
-#calendar {
+.calendar-panel {
     width: 100%;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
+    box-sizing: border-box;
 }
