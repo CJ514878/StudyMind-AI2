@@ -1458,6 +1458,7 @@ if (analyzeProgressButton) {
     analyzeProgressButton.addEventListener(
         "click",
         async function() {
+            console.log("ANALYZE BUTTON CLICKED");
 
             let adviceElement =
                 document.getElementById(
