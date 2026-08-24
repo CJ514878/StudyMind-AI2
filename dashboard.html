@@ -1,540 +1,2795 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    background-color: #0f172a;
+}
+
+h1 {
+    color: white;
+    font-size: 70px;
+    line-height: 1.1;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 20px;
+}
+
+.start-button {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.start-button:hover {
+    background-color: #1d4ed8;
+    cursor: pointer;
+}
+
+body {
+    background-color: #0f172a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    background-color: #0f172a;
+}
+
+.features {
+    padding: 60px;
+}
+
+.how-it-works {
+    padding: 60px;
+}
+
+h2 {
+    color: white;
+    font-size: 32px;
+}
+
+h3 {
+    color: white;
+    font-size: 28px;
+}
+
+li {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.feature-box {
+    background-color: #1e293b;
+    color: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    background-color: #334155;
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+
+.feature-box h3 {
+    color: #22c55e;
+}
+
+.feature-box p {
+    color: #cbd5e1;
+}
+
+.hero-image {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.feature-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-image img {
+    width: 450px;
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    border-bottom: 1px solid #334155;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #22c55e;
+}
+
+.logo {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta-button {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #16a34a;
+    transform: scale(1.05);
+}
+
+.hero {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.student-form {
+    max-width: 700px;
+    margin: 80px auto;
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.student-form label {
+    color: white;
+    font-size: 20px;
+}
+
+.student-form select,
+.student-form input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#generateButton {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#generateButton:hover {
+    background-color: #16a34a;
+    transform: scale(1.05);
+}
+
+#studyPlan {
+    margin-top: 30px;
+    background-color: #334155;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.timetable th {
+    background: #2563eb;
+    color: white;
+}
+
+.timetable tr:nth-child(even) {
+    background-color: #475569;
+}
+
+.timetable tr:nth-child(odd) {
+    background-color: #334155;
+}
+
+#clearButton {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+#clearButton:hover {
+    background-color: #b91c1c;
+    transform: scale(1.05);
+}
+
+#downloadButton {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+#downloadButton:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.student-form button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #d1d5db;
+}
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#themeButton {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+#themeButton:hover {
+    background: #1d4ed8;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background: #1f2937;
+}
+
+.dark-mode .hero {
+    background: #181818;
+}
+
+.dark-mode .feature-box {
+    background: #1e293b;
+    color: white;
+}
+
+.dark-mode .student-form {
+    background: #1e293b;
+    color: white;
+}
+
+.dark-mode input,
+.dark-mode select {
+    background: #374151;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode table {
+    color: white;
+}
+
+.dark-mode th {
+    background: #2563eb;
+}
+
+.dark-mode td {
+    border: 1px solid #555;
+}
+
+.dark-mode footer {
+    background: black;
+}
+
+#themeButton {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+    background: #1d4ed8;
+}
+
+body.dark-mode {
+    background: #0f172a;
+    color: white;
+}
+
+body.dark-mode .navbar {
+    background: #1e293b;
+}
+
+body.dark-mode .feature-box {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark-mode .student-form {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background: #334155;
+    color: white;
+    border: 1px solid #475569;
+}
+
+body.dark-mode table {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark-mode th {
+    background: #2563eb;
+}
+
+body.dark-mode td {
+    border: 1px solid #475569;
+}
+
+body.dark-mode footer {
+    background: #111827;
+    color: white;
+}
+
+/* =========================================================
+   STUDYMIND AI
+   COMPLETE STYLE SHEET
+   Dark Professional Dashboard + Large Calendar
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #0f172a;
+    color: #f8fafc;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 72px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0b1220;
+
+    border-bottom: 1px solid #1e293b;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+#themeButton {
+    padding: 10px 16px;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    background: #16233b;
+    color: #e2e8f0;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#themeButton:hover {
+    background: #1e3a5f;
+    border-color: #3b82f6;
+}
+
+
+/* =========================================================
+   DASHBOARD PAGE
+   ========================================================= */
+
+.dashboard-page {
+    width: min(1500px, 94%);
+
+    margin: 0 auto;
+
+    padding: 45px 0 70px;
+}
+
+.dashboard-page > h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.dashboard-subtitle {
+    margin: 10px 0 32px;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   TOP STATISTICS
+   ========================================================= */
+
+.top-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    min-height: 145px;
+
+    padding: 24px;
+
+    background: #111c32;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #334155;
+}
+
+.stat-card .icon {
+    margin-bottom: 14px;
+
+    font-size: 24px;
+}
+
+.stat-card h4 {
+    margin: 0 0 8px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stat-card h2 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD
+   ========================================================= */
+
+.main-dashboard {
+    width: 100%;
+
+    display: grid;
+
+    /*
+       LEFT:
+       Progress
+       Subjects
+       Streak
+       Score
+       AI
+
+       RIGHT:
+       Large Calendar
+    */
+
+    grid-template-columns:
+        minmax(360px, 0.82fr)
+        minmax(650px, 1.7fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   LEFT PANEL
+   ========================================================= */
+
+.left-panel {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   GENERAL PANEL CARD
+   ========================================================= */
 
-<head>
-    <meta charset="UTF-8">
+.panel-card {
+    width: 100%;
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    padding: 25px;
 
-    <title>StudyMind AI - Study Dashboard</title>
+    background: #111c32;
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    border: 1px solid #1e293b;
 
-<body>
+    border-radius: 20px;
 
-<nav class="navbar">
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.16);
+}
 
-    <h2 class="logo">StudyMind AI</h2>
+.panel-card h2 {
+    margin: 0 0 20px;
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#calendar">Calendar</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-    </ul>
+    color: #f8fafc;
 
-    <button id="themeButton">
-        🌙 Dark Mode
-    </button>
+    font-size: 21px;
+    font-weight: 650;
+}
 
-</nav>
+.panel-card p {
+    color: #94a3b8;
 
+    line-height: 1.6;
+}
 
-<main class="dashboard-page">
 
-    <h1>My Study Dashboard</h1>
+/* =========================================================
+   PROGRESS TRACKER
+   ========================================================= */
 
-    <p class="dashboard-subtitle">
-        Your personalized study plan
-    </p>
+.progress-circle {
+    width: 175px;
+    height: 175px;
 
+    margin: 15px auto 20px;
 
-    <!-- TOP STATISTICS -->
+    border-radius: 50%;
 
-    <section class="top-stats">
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        <div class="stat-card">
+    background:
+        radial-gradient(
+            circle,
+            #111c32 59%,
+            transparent 60%
+        ),
+        conic-gradient(
+            #3b82f6 0deg,
+            #3b82f6 0deg,
+            #1e293b 0deg
+        );
 
-            <div class="icon">🕒</div>
+    transition: 0.5s ease;
+}
 
-            <h4>Weekly Hours</h4>
+#progressPercent {
+    color: #f8fafc;
 
-            <h2 id="weeklyHours">0</h2>
+    font-size: 32px;
+    font-weight: 700;
+}
 
-        </div>
+#progressCount {
+    margin: 0 0 20px;
 
+    text-align: center;
 
-        <div class="stat-card">
+    color: #94a3b8;
+}
 
-            <div class="icon">📅</div>
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
 
-            <h4>Days Left</h4>
+    overflow: hidden;
 
-            <h2 id="daysLeft">0</h2>
+    border-radius: 999px;
 
-        </div>
+    background: #1e293b;
+}
 
+#progressBar {
+    width: 0%;
+    height: 100%;
 
-        <div class="stat-card">
+    border-radius: 999px;
 
-            <div class="icon">🎯</div>
+    background: #3b82f6;
 
-            <h4>Daily Goal</h4>
+    transition: width 0.5s ease;
+}
 
-            <h2 id="dailyGoal">0 hrs</h2>
 
-        </div>
+/* =========================================================
+   SUBJECTS
+   ========================================================= */
 
+.subject-list {
+    width: 100%;
 
-        <div class="stat-card">
+    display: flex;
+    flex-direction: column;
 
-            <div class="icon">⭐</div>
+    gap: 10px;
+}
 
-            <h4>Study Score</h4>
+.subject-list > * {
+    padding: 13px 15px;
 
-            <h2 id="studyScore">0</h2>
+    background: #0f172a;
 
-        </div>
+    border: 1px solid #1e293b;
 
-    </section>
+    border-radius: 12px;
 
+    color: #cbd5e1;
+}
 
 
-    <!-- MAIN DASHBOARD -->
+/* =========================================================
+   STUDY STREAK
+   ========================================================= */
 
-    <section class="main-dashboard">
+#streak {
+    margin: 5px 0;
 
+    color: #f8fafc;
 
-        <!-- LEFT COLUMN -->
+    font-size: 34px;
+    font-weight: 700;
+}
 
-        <div class="left-panel">
 
+/* =========================================================
+   STUDY SCORE
+   ========================================================= */
 
-            <!-- PROGRESS -->
+.study-score-card {
+    text-align: center;
+}
 
-            <div class="panel-card">
+.score-number {
+    margin: 5px 0 10px;
 
-                <h2>✅ Progress Tracker</h2>
+    color: #f8fafc;
 
-                <div class="progress-circle">
+    font-size: 42px;
+    font-weight: 700;
+}
 
-                    <span id="progressPercent">
-                        0%
-                    </span>
+.score-progress {
+    width: 100%;
+    height: 9px;
 
-                </div>
+    margin-top: 20px;
 
-                <p id="progressCount">
-                    0 of 0 subjects completed
-                </p>
+    overflow: hidden;
 
-                <div class="progress-bar-container">
+    border-radius: 999px;
 
-                    <div id="progressBar"></div>
+    background: #1e293b;
+}
 
-                </div>
+#scoreProgressBar {
+    width: 0%;
+    height: 100%;
 
-            </div>
+    border-radius: 999px;
 
-<!-- SUBJECTS -->
+    background: #8b5cf6;
 
-<div class="panel-card">
+    transition: width 0.5s ease;
+}
 
-    <h2>📚 Subjects</h2>
 
-<div id="subjectList" class="subject-list">
+/* =========================================================
+   AI ASSISTANT
+   ========================================================= */
 
-        <!-- Subjects will be added by JavaScript -->
+.ai-assistant-card {
+    background:
+        linear-gradient(
+            145deg,
+            #111c32 0%,
+            #101a30 100%
+        );
+}
 
-    </div>
+.ai-assistant-header h2 {
+    margin-bottom: 7px;
+}
 
-</div>
+.ai-assistant-header p {
+    margin-top: 0;
+}
 
+.ai-analyze-section {
+    margin-top: 22px;
+}
 
-            <!-- STREAK -->
+.ai-analyze-button,
+.ask-ai-button {
+    width: 100%;
 
-            <div class="panel-card">
+    padding: 13px 18px;
 
-                <h2>🔥 Study Streak</h2>
+    border: none;
+    border-radius: 12px;
 
-                <h1 id="streak">
-                    0 Days
-                </h1>
+    background: #2563eb;
 
-                <p>
-                    Keep it up! 🔥
-                </p>
+    color: #ffffff;
 
-            </div>
+    font-size: 15px;
+    font-weight: 600;
 
+    cursor: pointer;
 
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
 
- <!-- LIVE STUDY SCORE -->
+.ai-analyze-button:hover,
+.ask-ai-button:hover {
+    background: #1d4ed8;
 
-<div class="panel-card study-score-card">
+    transform: translateY(-1px);
+}
 
-    <h2>⭐ Study Score</h2>
+.ai-analysis-result {
+    margin-top: 15px;
 
-    <h1 class="score-number">
-        <span id="scoreDisplay">0</span>/100
-    </h1>
+    padding: 14px;
 
-    <p id="scoreMessage">
-        Start studying to build your score.
-    </p>
+    background: #0f172a;
 
-    <div class="score-progress">
-        <div id="scoreProgressBar"></div>
-    </div>
+    border: 1px solid #1e293b;
 
-</div>
+    border-radius: 12px;
 
+    color: #cbd5e1;
 
-<!-- ==========================================
-     STUDYMIND AI ASSISTANT
-========================================== -->
+    line-height: 1.6;
+}
 
-<div class="panel-card ai-assistant-card">
+.ask-ai-section {
+    margin-top: 28px;
 
-    <div class="ai-assistant-header">
+    padding-top: 25px;
 
-        <div>
-            <h2>🤖 StudyMind AI</h2>
+    border-top: 1px solid #1e293b;
+}
 
-            <p>
-                Get personalized help with your study plan.
-            </p>
-        </div>
+.ask-ai-section h3 {
+    margin: 0 0 8px;
 
-    </div>
+    color: #f8fafc;
+}
 
+.ask-ai-section p {
+    margin-top: 0;
+}
 
-    <!-- ANALYZE PROGRESS -->
+#aiQuestion {
+    width: 100%;
 
-    <div class="ai-analyze-section">
+    min-height: 90px;
 
-        <button
-            id="analyzeProgressButton"
-            class="ai-analyze-button"
-        >
-            🔍 Analyze My Progress
-        </button>
+    padding: 14px;
 
-        <p
-            id="aiAdviceText"
-            class="ai-analysis-result"
-        >
-            Your personalized study analysis will appear here.
-        </p>
+    resize: vertical;
 
-    </div>
+    outline: none;
 
+    background: #0b1220;
 
-    <!-- ASK AI -->
+    border: 1px solid #334155;
 
-    <div class="ask-ai-section">
+    border-radius: 12px;
 
-        <h3>💬 Ask StudyMind AI</h3>
+    color: #f8fafc;
 
-        <p>
-            Ask anything about your study plan, subjects, or progress.
-        </p>
+    font-family: inherit;
+    font-size: 14px;
 
-        <textarea
-            id="aiQuestion"
-            placeholder="e.g. What should I study today?"
-            rows="3"
-        ></textarea>
+    transition: border-color 0.2s ease;
+}
 
-        <button
-            id="askAIButton"
-            class="ask-ai-button"
-        >
-            🤖 Ask AI
-        </button>
+#aiQuestion::placeholder {
+    color: #64748b;
+}
 
-        <div
-            id="aiResponse"
-            class="ai-response"
-        >
-            AI responses will appear here.
-        </div>
+#aiQuestion:focus {
+    border-color: #3b82f6;
+}
 
-    </div>
+.ask-ai-button {
+    margin-top: 12px;
+}
 
-</div>
+.ai-response {
+    min-height: 60px;
 
+    margin-top: 15px;
 
+    padding: 15px;
 
-        <!-- CALENDAR -->
+    background: #0f172a;
 
-        <div class="calendar-panel" id="calendar">
+    border: 1px solid #1e293b;
 
-            <h2>📅 Study Calendar</h2>
+    border-radius: 12px;
 
-            <div class="calendar-header">
+    color: #cbd5e1;
 
-                <button id="previousMonth">
-                    ‹
-                </button>
+    line-height: 1.6;
+}
 
-                <h2 id="calendarMonth">
-                    Month Year
-                </h2>
 
-                <button id="nextMonth">
-                    ›
-                </button>
+/* =========================================================
+   =========================================================
+   BIG STUDY CALENDAR
+   =========================================================
+   ========================================================= */
 
-            </div>
+.calendar-panel {
+    width: 100%;
 
+    min-height: 700px;
 
-            <div class="calendar-weekdays">
+    padding: 30px;
 
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
+    background:
+        linear-gradient(
+            145deg,
+            #111c32 0%,
+            #0f1a2e 100%
+        );
 
-            </div>
+    border: 1px solid #1e293b;
 
+    border-radius: 24px;
 
-            <div
-                class="calendar-days"
-                id="calendarDays">
-            </div>
-<div class="calendar-legend">
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.22);
 
-    <div class="legend-item">
-        <span class="legend-color study-color"></span>
-        <span>Study Day</span>
-    </div>
+    overflow: hidden;
+}
 
-    <div class="legend-item">
-        <span class="legend-color completed-color"></span>
-        <span>Completed</span>
-    </div>
+.calendar-panel > h2 {
+    margin: 0 0 25px;
 
-    <div class="legend-item">
-        <span class="legend-color exam-color"></span>
-        <span>Exam Day</span>
-    </div>
+    color: #f8fafc;
 
-    <div class="legend-item">
-        <span class="legend-color today-color"></span>
-        <span>Today</span>
-    </div>
+    font-size: 25px;
+    font-weight: 700;
+}
 
-</div>
 
-<div class="calendar-legend">
+/* =========================================================
+   CALENDAR HEADER
+   ========================================================= */
 
-    <div>
-        <span class="legend-dot study-dot"></span>
-        Study Day
-    </div>
+.calendar-header {
+    width: 100%;
 
-    <div>
-        <span class="legend-dot completed-dot"></span>
-        Completed
-    </div>
+    display: grid;
 
-    <div>
-        <span class="legend-dot exam-dot"></span>
-        Test / Exam
-    </div>
+    grid-template-columns: 50px 1fr 50px;
 
-    <div>
-        <span class="legend-dot break-dot"></span>
-        Break Day
-    </div>
+    align-items: center;
 
-</div>
+    gap: 12px;
 
+    margin-bottom: 25px;
+}
 
-            <div class="calendar-legend">
+.calendar-header h2 {
+    margin: 0;
 
-                <span>
-                    🔵 Study Day
-                </span>
+    text-align: center;
 
-                <span>
-                    🟢 Completed
-                </span>
+    color: #f8fafc;
 
-                <span>
-                    🟠 Test / Exam
-                </span>
+    font-size: 24px;
+    font-weight: 700;
+}
 
-                <span>
-                    🟣 Break Day
-                </span>
+.calendar-header button {
+    width: 50px;
+    height: 50px;
 
-            </div>
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        </div>
+    padding: 0;
 
-    </section>
+    background: #16233b;
 
+    border: 1px solid #334155;
 
+    border-radius: 13px;
 
-    <!-- BOTTOM SECTION -->
+    color: #f8fafc;
 
-    <section class="bottom-dashboard">
+    font-size: 30px;
+    line-height: 1;
 
+    cursor: pointer;
 
-   <!-- TODAY'S STUDY -->
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
 
-<div class="panel-card today-study-card">
+.calendar-header button:hover {
+    background: #1e3a5f;
 
-    <div class="study-card-header">
+    border-color: #3b82f6;
 
-        <div class="study-card-title">
+    transform: translateY(-2px);
+}
 
-            <div class="study-icon">
-                🎯
-            </div>
 
-            <div>
-                <p class="study-eyebrow">
-                    CURRENT STUDY SESSION
-                </p>
+/* =========================================================
+   WEEKDAYS
+   ========================================================= */
 
-                <h2>Today's Focus</h2>
-            </div>
+.calendar-weekdays {
+    width: 100%;
 
-        </div>
+    display: grid;
 
-        <div class="live-indicator">
-            <span></span>
-            LIVE
-        </div>
+    grid-template-columns: repeat(7, 1fr);
 
-    </div>
+    gap: 8px;
 
+    margin-bottom: 8px;
+}
 
-    <div id="currentStudy" class="current-study">
+.calendar-weekdays div {
+    padding: 12px 5px;
 
-        <p class="study-label">
-            UP NEXT
-        </p>
+    text-align: center;
 
-        <h2 id="currentSubject">
-            —
-        </h2>
+    color: #64748b;
 
-        <h3 id="currentTopic">
-            No topic available
-        </h3>
+    font-size: 13px;
+    font-weight: 700;
 
+    text-transform: uppercase;
 
-        <div class="topic-time">
+    letter-spacing: 0.5px;
+}
 
-            <div class="time-icon">
-                ⏱
-            </div>
 
-            <div>
-                <span class="time-label">
-                    Required study time
-                </span>
+/* =========================================================
+   CALENDAR DAYS GRID
+   ========================================================= */
 
-                <strong id="topicTime">
-                    —
-                </strong>
-            </div>
+.calendar-days {
+    width: 100%;
 
-        </div>
+    display: grid;
 
+    grid-template-columns: repeat(7, minmax(0, 1fr));
 
-        <!-- TIMER -->
+    /*
+       LARGE CALENDAR CELLS
+    */
 
-        <div class="timer-container">
+    grid-auto-rows: minmax(82px, 1fr);
 
-            <p class="timer-label">
-                STUDY TIMER
-            </p>
+    gap: 8px;
+}
 
-            <div
-                id="studyTimer"
-                class="study-timer"
-            >
-                00:00
-            </div>
 
-        </div>
+/* =========================================================
+   INDIVIDUAL CALENDAR DAY
+   ========================================================= */
 
+.calendar-days > * {
+    position: relative;
 
-        <!-- START / PAUSE BUTTON -->
+    min-height: 82px;
 
-        <button
-            id="startStudyButton"
-            class="start-study-button"
-        >
-            <span class="button-icon">▶</span>
-            <span>Start Studying</span>
-        </button>
+    display: flex;
 
+    align-items: flex-start;
+    justify-content: flex-start;
 
-        <!-- COMPLETE TOPIC -->
+    padding: 12px;
 
-        <label class="complete-topic">
+    background: #0c1628;
 
-            <input
-                type="checkbox"
-                id="completeTopicCheckbox"
-            >
+    border: 1px solid #1e293b;
 
-            <span class="custom-checkbox"></span>
+    border-radius: 13px;
 
-            <span class="complete-text">
-                I've completed this topic
-            </span>
+    color: #e2e8f0;
 
-        </label>
+    font-size: 15px;
+    font-weight: 600;
 
+    cursor: pointer;
 
-        <!-- COMPLETION MESSAGE -->
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
 
-        <p
-            id="completionMessage"
-            class="completion-message"
-        ></p>
+.calendar-days > *:hover {
+    transform: translateY(-2px);
 
+    background: #12213a;
 
-        <div class="study-tip">
+    border-color: #3b82f6;
 
-            <span>💡</span>
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.18);
+}
 
-            <p>
-                Stay focused and complete this topic
-                before moving to the next one.
-            </p>
 
-        </div>
+/* =========================================================
+   EMPTY DAYS
+   ========================================================= */
 
-    </div>
+.calendar-days .empty,
+.calendar-days .disabled {
+    background: #0a1220;
 
-</div>
+    border-color: #151f31;
 
+    opacity: 0.3;
 
-        <!-- TODAY'S SCHEDULE -->
+    cursor: default;
+}
 
-        <div class="panel-card" id="schedule">
+.calendar-days .empty:hover,
+.calendar-days .disabled:hover {
+    transform: none;
 
-            <h2>🕒 Today's Schedule</h2>
+    background: #0a1220;
 
-            <div id="todaySchedule">
+    border-color: #151f31;
 
-                <p>
-                    Your schedule will appear here.
-                </p>
+    box-shadow: none;
+}
 
-            </div>
 
-        </div>
+/* =========================================================
+   TODAY
+   ========================================================= */
 
-    </section>
+.calendar-days .today,
+.calendar-days > .today {
+    background:
+        linear-gradient(
+            145deg,
+            #122b50,
+            #10213a
+        );
 
-</main>
+    border: 2px solid #3b82f6;
 
+    color: #60a5fa;
 
-<script src="dashboard.js"></script>
+    box-shadow:
+        0 0 0 2px rgba(59, 130, 246, 0.08);
+}
 
-</body>
 
-</html>
+/* =========================================================
+   STUDY DAY
+   ========================================================= */
+
+.calendar-days .study-day,
+.calendar-days > .study-day {
+    background:
+        linear-gradient(
+            145deg,
+            #102544,
+            #0d1d33
+        );
+
+    border-color: rgba(59, 130, 246, 0.55);
+}
+
+
+/* =========================================================
+   COMPLETED DAY
+   ========================================================= */
+
+.calendar-days .completed,
+.calendar-days .completed-day,
+.calendar-days > .completed {
+    background:
+        linear-gradient(
+            145deg,
+            #102c28,
+            #0c211f
+        );
+
+    border-color: rgba(34, 197, 94, 0.55);
+}
+
+
+/* =========================================================
+   EXAM DAY
+   ========================================================= */
+
+.calendar-days .exam-day,
+.calendar-days > .exam-day {
+    background:
+        linear-gradient(
+            145deg,
+            #332016,
+            #24170f
+        );
+
+    border-color: rgba(249, 115, 22, 0.65);
+}
+
+
+/* =========================================================
+   BREAK DAY
+   ========================================================= */
+
+.calendar-days .break-day,
+.calendar-days > .break-day {
+    background:
+        linear-gradient(
+            145deg,
+            #241735,
+            #1b1229
+        );
+
+    border-color: rgba(168, 85, 247, 0.55);
+}
+
+
+/* =========================================================
+   CALENDAR LEGENDS
+   ========================================================= */
+
+/*
+   Your HTML currently contains multiple
+   .calendar-legend sections.
+
+   They are all kept compact here.
+*/
+
+.calendar-legend {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px 25px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #1e293b;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.calendar-legend > div,
+.calendar-legend > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+/* =========================================================
+   LEGEND DOTS
+   ========================================================= */
+
+.legend-color,
+.legend-dot {
+    width: 10px;
+    height: 10px;
+
+    flex-shrink: 0;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+.study-color,
+.study-dot {
+    background: #3b82f6;
+}
+
+.completed-color,
+.completed-dot {
+    background: #22c55e;
+}
+
+.exam-color,
+.exam-dot {
+    background: #f97316;
+}
+
+.today-color {
+    background: #60a5fa;
+}
+
+.break-dot {
+    background: #a855f7;
+}
+
+
+/* =========================================================
+   GENERAL BUTTONS
+   ========================================================= */
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b1220;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+    .top-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-panel {
+        min-height: auto;
+    }
+
+    .calendar-days {
+        grid-auto-rows: minmax(90px, 1fr);
+    }
+
+    .calendar-days > * {
+        min-height: 90px;
+    }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .dashboard-page {
+        width: 92%;
+    }
+
+    .dashboard-page > h1 {
+        font-size: 32px;
+    }
+
+    .main-dashboard {
+        gap: 20px;
+    }
+
+    .calendar-panel {
+        padding: 22px;
+    }
+
+    .calendar-days {
+        gap: 6px;
+
+        grid-auto-rows: minmax(75px, 1fr);
+    }
+
+    .calendar-days > * {
+        min-height: 75px;
+
+        padding: 10px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    #themeButton {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+    .dashboard-page {
+        width: 92%;
+
+        padding: 30px 0 50px;
+    }
+
+    .dashboard-page > h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-subtitle {
+        font-size: 15px;
+
+        margin-bottom: 25px;
+    }
+
+    .top-stats {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .stat-card {
+        min-height: 125px;
+
+        padding: 20px;
+    }
+
+    .panel-card {
+        padding: 20px;
+
+        border-radius: 17px;
+    }
+
+    .calendar-panel {
+        padding: 16px;
+
+        border-radius: 18px;
+    }
+
+    .calendar-panel > h2 {
+        font-size: 21px;
+
+        margin-bottom: 20px;
+    }
+
+    .calendar-header {
+        grid-template-columns: 40px 1fr 40px;
+
+        gap: 8px;
+
+        margin-bottom: 18px;
+    }
+
+    .calendar-header button {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 10px;
+
+        font-size: 24px;
+    }
+
+    .calendar-header h2 {
+        font-size: 18px;
+    }
+
+    .calendar-weekdays {
+        gap: 3px;
+    }
+
+    .calendar-weekdays div {
+        padding: 7px 1px;
+
+        font-size: 9px;
+    }
+
+    .calendar-days {
+        gap: 4px;
+
+        grid-auto-rows: minmax(55px, 1fr);
+    }
+
+    .calendar-days > * {
+        min-height: 55px;
+
+        padding: 7px;
+
+        border-radius: 8px;
+
+        font-size: 11px;
+    }
+
+    .calendar-legend {
+        gap: 9px 14px;
+
+        padding-top: 15px;
+
+        font-size: 10px;
+    }
+
+    .progress-circle {
+        width: 155px;
+        height: 155px;
+    }
+
+    .score-number {
+        font-size: 36px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .calendar-panel {
+        padding: 12px;
+    }
+
+    .calendar-days {
+        gap: 2px;
+    }
+
+    .calendar-days > * {
+        min-height: 48px;
+
+        padding: 5px;
+
+        border-radius: 6px;
+
+        font-size: 10px;
+    }
+
+    .calendar-weekdays div {
+        font-size: 8px;
+    }
+
+    .calendar-header h2 {
+        font-size: 16px;
+    }
+}
+body.dark-mode .panel-card,
+body.dark-mode .calendar-panel,
+body.dark-mode .stat-card,
+body.dark-mode .card,
+body.dark-mode .recommendation-card,
+body.dark-mode .stat-box {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #f8fafc;
+}
+
+body.dark-mode a {
+    color: #f8fafc;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #334155;
+    color: #f8fafc;
+    border-color: #475569;
+}
+
+/* ==========================================
+   DARK MODE — TOPICS
+========================================== */
+
+body.dark-mode .topics-card {
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+body.dark-mode .input-card-header p {
+    color: #94a3b8;
+}
+
+body.dark-mode .input-icon {
+    background: #334155;
+}
+
+body.dark-mode #topics {
+    background: #0f172a;
+    color: #f8fafc;
+    border-color: #475569;
+}
+
+body.dark-mode #topics::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode #topics:focus {
+    background: #0f172a;
+    border-color: #818cf8;
+}
+
+body.dark-mode .topics-help {
+    background: #0f172a;
+    border-color: #475569;
+}
+
+body.dark-mode .topics-help p {
+    color: #94a3b8;
+}
+
+body.dark-mode .difficulty-section {
+    border-color: #475569;
+}
+
+/* ==========================================
+   TOPICS SECTION
+   ========================================== */
+
+.topics-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.topics-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.topics-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    border-radius: 14px;
+    font-size: 27px;
+}
+
+.topics-header h2 {
+    margin: 0;
+}
+
+.topics-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+}
+
+.topics-card label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.topics-card textarea {
+    width: 100%;
+    min-height: 170px;
+    padding: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s;
+}
+
+.topics-card textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.topics-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 15px 0 20px;
+}
+
+.topics-tip p {
+    margin: 4px 0 0;
+    color: #64748b;
+}
+
+/* ==========================================
+   GENERATE TOPIC DIFFICULTY BUTTON
+   ========================================== */
+
+.difficulty-button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #6366f1;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.difficulty-button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.difficulty-button:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   DIFFICULTY RESULTS
+   ========================================== */
+
+.difficulty-section {
+    margin-top: 25px;
+}
+
+.difficulty-section h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.difficulty-topic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.topic-name {
+    font-weight: 500;
+}
+
+.difficulty-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+}
+
+/* ==========================================
+   DARK MODE - TOPICS
+   ========================================== */
+
+body.dark-mode .topics-card {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark-mode .topics-header p,
+body.dark-mode .topics-tip p {
+    color: #94a3b8;
+}
+
+body.dark-mode .topics-icon {
+    background: #312e81;
+}
+
+body.dark-mode .topics-card textarea {
+    background: #0f172a;
+    color: white;
+    border-color: #475569;
+}
+
+body.dark-mode .topics-card textarea::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .topics-tip {
+    background: #0f172a;
+}
+
+body.dark-mode .difficulty-topic {
+    background: #0f172a;
+    border-color: #475569;
+}
+
+body.dark-mode .difficulty-select {
+    background: #1e293b;
+    color: white;
+    border-color: #475569;
+}
+
+.input-tip {
+    font-size: 14px;
+    color: #64748b;
+    margin: 8px 0 12px;
+    line-height: 1.5;
+}
+
+.how-header {
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.how-header h2 span {
+    color: #2563eb;
+}
+
+.how-header p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   STEP CARDS
+========================================== */
+
+.steps-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.step-card {
+    position: relative;
+    background: #1e293b;
+    padding: 35px 25px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.10);
+}
+
+/* ==========================================
+   STEP NUMBER
+========================================== */
+
+.step-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.step-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #24344d;
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.step-card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+.step-card p {
+    margin: 0;
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+/* ==========================================
+   HOW IT WORKS RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .how-it-works {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 70px 6%;
+        text-align: center;
+    }
+    .how-header {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .how-header p {
+        text-align: center;
+    }
+    .steps-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .step-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .step-arrow {
+        display: none;
+    }
+}
+
+/* ==========================================
+   WELCOME PAGE
+========================================== */
+
+.welcome-page {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient( circle at 50% 50%, #2563eb 0%, #1d4ed8 12%, #172554 30%, #0f172a 55%, #020617 100%);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.welcome-page.welcome-hidden {
+    display: none;
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.welcome-content {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: welcomeFade 1s ease;
+}
+
+/* ==========================================
+   STUDYMIND AI TITLE
+========================================== */
+
+.welcome-title {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(80px, 11vw, 180px);
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: -7px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.welcome-title span {
+    color: #2563eb;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.welcome-content p {
+    max-width: 650px;
+    margin: 30px 20px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   GET STARTED BUTTON
+========================================== */
+
+.welcome-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 17px 36px;
+    background: linear-gradient( 135deg, #22c55e, #16a34a);
+    color: white;
+    border-radius: 14px;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(34, 197, 94, 0.3);
+    transition: all 0.25s ease;
+}
+
+.welcome-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(34, 197, 94, 0.45);
+}
+
+.welcome-button span {
+    font-size: 24px;
+    transition: transform 0.25s ease;
+}
+
+.welcome-button:hover span {
+    transform: translateX(6px);
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes welcomeFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+    .welcome-title {
+        font-size: 50px;
+        letter-spacing: -3px;
+        white-space: normal;
+    }
+    .welcome-content p {
+        font-size: 17px;
+        padding: 0 20px;
+    }
+}
+
+/* ==========================================
+   LIVE STUDY SESSION
+========================================== */
+
+.today-study-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.study-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.study-card-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.study-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(37, 99, 235, 0.12);
+    font-size: 21px;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.study-eyebrow {
+    margin: 0 0 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #64748b;
+}
+
+.study-card-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* ==========================================
+   LIVE INDICATOR
+========================================== */
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #16a34a;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.live-indicator span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: livePulse 1.8s infinite;
+}
+
+@keyframes livePulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(0.75);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   CURRENT STUDY
+========================================== */
+
+.current-study {
+    text-align: center;
+}
+
+.study-label {
+    margin: 0 0 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #64748b;
+}
+
+#currentSubject {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2563eb;
+}
+
+#currentTopic {
+    margin: 8px 0 18px;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* ==========================================
+   REQUIRED TIME
+========================================== */
+
+.topic-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    background: rgba(100, 116, 139, 0.08);
+    border: 1px solid rgba(100, 116, 139, 0.12);
+    text-align: left;
+}
+
+.time-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(37, 99, 235, 0.1);
+    font-size: 15px;
+}
+
+.time-label {
+    display: block;
+    font-size: 10px;
+    color: #64748b;
+    margin-bottom: 2px;
+}
+
+.topic-time strong {
+    display: block;
+    font-size: 13px;
+}
+
+/* ==========================================
+   TIMER
+========================================== */
+
+.timer-container {
+    padding: 25px 15px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background: rgba(37, 99, 235, 0.045);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.timer-label {
+    margin: 0 0 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #64748b;
+}
+
+.study-timer {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    color: #0f172a;
+}
+
+/* ==========================================
+   COMPLETE TOPIC
+========================================== */
+
+.complete-topic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.complete-topic input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 2px solid #cbd5e1;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.complete-topic input:checked+.custom-checkbox {
+    background: #2563eb;
+    border-color: #2563eb;
+    position: relative;
+}
+
+.complete-topic input:checked+.custom-checkbox::after {
+    content: "✓";
+    position: absolute;
+    left: 2px;
+    top: -3px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.complete-text {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* ==========================================
+   COMPLETION MESSAGE
+========================================== */
+
+.completion-message {
+    min-height: 18px;
+    margin: 12px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #16a34a;
+}
+
+/* ==========================================
+   STUDY TIP
+========================================== */
+
+.study-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(100, 116, 139, 0.06);
+    text-align: left;
+}
+
+.study-tip span {
+    font-size: 14px;
+}
+
+.study-tip p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+.dark-mode .study-eyebrow,
+.dark-mode .study-label,
+.dark-mode .time-label,
+.dark-mode .timer-label,
+.dark-mode .complete-text,
+.dark-mode .study-tip p {
+    color: #94a3b8;
+}
+
+.dark-mode #currentTopic,
+.dark-mode .study-card-header h2,
+.dark-mode .topic-time strong {
+    color: #f8fafc;
+}
+
+.dark-mode .study-icon {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .topic-time {
+    background: rgba(148, 163, 184, 0.06);
+    border-color: rgba(148, 163, 184, 0.1);
+}
+
+.dark-mode .timer-container {
+    background: rgba(59, 130, 246, 0.07);
+    border-color: rgba(59, 130, 246, 0.12);
+}
+
+.dark-mode .study-timer {
+    color: #f8fafc;
+}
+
+.dark-mode .study-tip {
+    background: rgba(148, 163, 184, 0.05);
+}
+
+.dark-mode .custom-checkbox {
+    border-color: #475569;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+    .study-card-header {
+        align-items: flex-start;
+    }
+    .live-indicator {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+    #currentTopic {
+        font-size: 23px;
+    }
+    .study-timer {
+        font-size: 40px;
+    }
+}
+
+/* ==========================================
+   PREMIUM START STUDY BUTTON
+========================================== */
+
+.start-study-button {
+    position: relative;
+    width: 100%;
+    height: 54px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 14px;
+    background: linear-gradient( 135deg, #2563eb 0%, #4f46e5 100%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* SHINE EFFECT */
+
+.start-study-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+/* HOVER */
+
+.start-study-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(147, 197, 253, 0.6);
+    box-shadow: 0 14px 32px rgba(37, 99, 235, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.start-study-button:hover::before {
+    left: 130%;
+}
+
+/* ICON */
+
+.start-study-button .button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 11px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.start-study-button:hover .button-icon {
+    transform: translateX(2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CLICK */
+
+.start-study-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.25);
+}
+
+/* PAUSED */
+
+.start-study-button.is-paused {
+    background: linear-gradient( 135deg, #f59e0b, #ea580c);
+    border-color: rgba(251, 191, 36, 0.4);
+    box-shadow: 0 10px 26px rgba(245, 158, 11, 0.25);
+}
+
+/* COMPLETED */
+
+.start-study-button.completed {
+    background: linear-gradient( 135deg, #16a34a, #15803d);
+    border-color: rgba(74, 222, 128, 0.35);
+    cursor: default;
+    box-shadow: 0 10px 26px rgba(22, 163, 74, 0.25);
+}
+
+/* DISABLED */
+
+.start-study-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ==========================================
+   HOW IT WORKS — MOBILE CENTERING FIX
+========================================== */
+
+@media (max-width: 600px) {
+    .how-it-works {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .how-header {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 45px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .how-header h2 {
+        width: 100%;
+        margin: 0 auto 15px;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 900;
+    }
+    .how-header p {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .steps-container {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .step-card {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .step-arrow {
+        display: none;
+    }
+}
+
+/* ==========================================
+   AI STUDY ANALYSIS
+========================================== */
+
+.ai-analysis {
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 16px;
+    background: #172033;
+    border: 1px solid #334155;
+}
+
+.ai-analysis h3 {
+    margin-top: 0;
+    color: #22c55e;
+    font-size: 24px;
+}
+
+.ai-analysis-content {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.7;
+    white-space: pre-line;
+}
