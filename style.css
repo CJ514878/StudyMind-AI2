@@ -3889,3 +3889,219 @@ body.dark-mode .difficulty-select {
     line-height: 1.7;
     white-space: pre-line;
 }
+/* ==========================================
+   STUDYMIND AI ASSISTANT
+========================================== */
+
+.ai-assistant-card {
+    margin-top: 20px;
+}
+
+.ai-assistant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ai-assistant-header h2 {
+    margin: 0;
+}
+
+.ai-assistant-header p {
+    margin: 6px 0 0;
+}
+
+
+/* ==========================================
+   ANALYZE PROGRESS
+========================================== */
+
+.ai-analyze-section {
+    margin-bottom: 25px;
+}
+
+.ai-analyze-button {
+    width: 100%;
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.ai-analyze-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.ai-analyze-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+
+/* ==========================================
+   AI ANALYSIS RESULT
+========================================== */
+
+.ai-analysis-result {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   ASK AI
+========================================== */
+
+.ask-ai-section {
+    margin-top: 20px;
+}
+
+.ask-ai-section h3 {
+    margin-bottom: 6px;
+}
+
+.ask-ai-section p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   AI QUESTION BOX
+========================================== */
+
+#aiQuestion {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    border: 1px solid #cbd5e1;
+
+    background: #ffffff;
+    color: #0f172a;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+#aiQuestion:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.12);
+}
+
+
+/* ==========================================
+   ASK AI BUTTON
+========================================== */
+
+.ask-ai-button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #22c55e;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.ask-ai-button:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+}
+
+.ask-ai-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+
+/* ==========================================
+   AI RESPONSE
+========================================== */
+
+.ai-response {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    min-height: 50px;
+
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark-mode .ai-analysis-result {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark-mode #aiQuestion {
+    background: #0f172a;
+    color: #f8fafc;
+
+    border-color: #334155;
+}
+
+body.dark-mode #aiQuestion::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .ai-response {
+    background: #1e293b;
+    color: #e2e8f0;
+}
